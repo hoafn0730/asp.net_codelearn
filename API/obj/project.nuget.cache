@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ShiphtXEy8g3hM7L1Y7HrM6Juq2kI/XNGcPQcCh/FlcdUFluBQ3sgc++JMe/1Uhi6ys6j1RMXcVlWOFP6JZBPQ==",
+  "success": true,
+  "projectFilePath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\API\\API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HOAN\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\HOAN\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\HOAN\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\HOAN\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\HOAN\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\HOAN\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
