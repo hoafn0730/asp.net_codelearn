@@ -1,6 +1,16 @@
+using BLL;
+using BLL.Interfaces;
+using DAL;
+using DAL.Interfaces;
+using DataAccessLayer;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<IDatabaseHelper, DatabaseHelper>();
+builder.Services.AddTransient<IAccountRepository, AccountRepository>();
+builder.Services.AddTransient<IAccountBusiness, AccountBusiness>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

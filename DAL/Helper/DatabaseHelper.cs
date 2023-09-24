@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace DataAccessLayer
 {
@@ -14,7 +14,7 @@ namespace DataAccessLayer
         //NpgsqlTransaction 
         public SqlTransaction sqlTransaction { get; set; }
 
-        public DatabaseHelper(IConfiguration configuration)
+        public DatabaseHelper( IConfiguration configuration )
         {
             StrConnection = configuration["ConnectionStrings:DefaultConnection"];
         }
@@ -22,7 +22,7 @@ namespace DataAccessLayer
         /// Set Connection String
         /// </summary>
         /// <param name="connectionString"></param>
-        public void SetConnectionString(string connectionString)
+        public void SetConnectionString( string connectionString )
         {
             StrConnection = connectionString;
         }
@@ -291,6 +291,9 @@ namespace DataAccessLayer
             }
             return result;
         }
+
+
+
         /// <summary>
         /// Execute Scalar Procedure query List store and command
         /// </summary>
@@ -348,6 +351,8 @@ namespace DataAccessLayer
             }
             return msgErrors;
         }
+
+
         /// <summary>
         /// Execute Procedure query List store with transaction
         /// </summary>
@@ -422,6 +427,10 @@ namespace DataAccessLayer
             }
             return msgErrors;
         }
+
+
+
+
         /// <summary>
         ///  Execute Scalar Procedure query
         /// </summary>
@@ -689,6 +698,8 @@ namespace DataAccessLayer
             }
             return result;
         }
+
+
         /// <summary>
         /// Execute Procedure return DataTale
         /// </summary>
