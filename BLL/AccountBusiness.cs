@@ -16,17 +16,27 @@ namespace BLL
         {
             _res = res;
         }
-        public Account GetDataById(int id)
+        public List<AccountModel> GetAll()
+        {
+            return _res.GetAll();
+        }
+
+        public AccountModel GetDataByAccount(string username, string password)
+        {
+            return _res.GetDataByAccount(username, password);
+        }
+
+        public AccountModel GetDataById(string id)
         {
             return _res.GetDataById(id);
         }
 
-        public bool Create(Account model)
+        public bool Create(AccountModel model)
         {
             return _res.Create(model);
         }
 
-        public bool Update(Account model)
+        public bool Update(AccountModel model)
         {
             return _res.Update(model);
         }

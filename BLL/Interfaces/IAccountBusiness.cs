@@ -9,11 +9,14 @@ namespace BLL.Interfaces
 {
     public interface IAccountBusiness
     {
-        Account GetDataById(int id);
+        List<AccountModel> GetAll();
 
-        bool Create(Account model);
+        AccountModel GetDataByAccount(string username, string password);
+        AccountModel GetDataById(string id);
 
-        bool Update(Account model);
+        bool Create(AccountModel model);
+
+        bool Update(AccountModel model);
 
         bool Delete(string id);
     }

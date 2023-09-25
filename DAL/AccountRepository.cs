@@ -21,7 +21,47 @@ namespace DAL
 
 
 
-        public Account GetDataById(int id)
+
+        public List< AccountModel > GetAll()
+        {
+            string msgError = "";
+            try
+            {
+                var data = _db.ExecuteQuery( "sp_get_account");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return data.ConvertTo<AccountModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+
+        public AccountModel GetDataByAccount(string username, string password)
+        {
+            string msgError = "";
+            try
+            {
+                var data = _db.ExecuteSProcedureReturnDataTable(
+                    out msgError,
+                    "sp_get_account_by_username",
+                    "@username", username,
+                    "@password", password);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return data.ConvertTo<AccountModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public AccountModel GetDataById(string id)
         {
             string msgError = "";
             try
@@ -33,7 +73,7 @@ namespace DAL
                     id);
                 if (!string.IsNullOrEmpty(msgError)) 
                     throw new Exception(msgError);
-                return data.ConvertTo<Account>().FirstOrDefault();
+                return data.ConvertTo<AccountModel>().FirstOrDefault();
             }
             catch (Exception ex)
             {
@@ -43,7 +83,7 @@ namespace DAL
         }
 
 
-        public bool Create(Account model)
+        public bool Create(AccountModel model)
         {
             string msgError = "";
             try
@@ -68,7 +108,7 @@ namespace DAL
             }
         }
 
-        public bool Update(Account model)
+        public bool Update(AccountModel model)
         {
             string msgError = "";
             try

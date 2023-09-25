@@ -10,11 +10,14 @@ namespace DAL.Interfaces
     public interface IAccountRepository
     {
 
-        Account GetDataById( int id );
+        List<AccountModel> GetAll();
+        AccountModel GetDataByAccount(string username, string password);
 
-        bool Create(Account model);
+        AccountModel GetDataById(string id);
 
-        bool Update(Account model);
+        bool Create(AccountModel model);
+
+        bool Update(AccountModel model);
 
         bool Delete(string id);
 

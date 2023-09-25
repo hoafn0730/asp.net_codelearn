@@ -10,6 +10,9 @@
         "dependencies": {
           "BLL": "1.0.0",
           "DataModel": "1.0.0",
+          "Microsoft.Data.SqlClient": "5.1.1",
+          "Microsoft.Extensions.Configuration": "7.0.0",
+          "Newtonsoft.Json": "13.0.3",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {

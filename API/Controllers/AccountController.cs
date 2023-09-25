@@ -15,17 +15,33 @@ namespace API.Controllers
             _accBusiness = accBusiness;
         }
 
+        [Route("get-all")]
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var dt = _accBusiness.GetAll().Select(x => new { x.accountId, x.username, x.password });
+            return Ok(dt);
+        }
+
         [Route("get-by-id")]
         [HttpGet]
-        public Account GetDataById( int id )
+        public AccountModel GetDataById( string id )
         {
             var dt = _accBusiness.GetDataById(id);
             return dt;
         }
 
+        [Route("get-by-username")]
+        [HttpGet]
+        public AccountModel GetDataByAccount(string username, string password)
+        {
+            var dt = _accBusiness.GetDataByAccount(username, password);
+            return dt;
+        }
+
         [Route("create-account")]
         [HttpPost]
-        public Account CreateItem([FromBody] Account model)
+        public AccountModel CreateItem([FromBody] AccountModel model)
         {
             _accBusiness.Create(model);
             return model;
@@ -33,7 +49,7 @@ namespace API.Controllers
 
         [Route("update-account")]
         [HttpPost]
-        public Account UpdateItem([FromBody] Account model)
+        public AccountModel UpdateItem([FromBody] AccountModel model)
         {
             _accBusiness.Update(model);
             return model;
