@@ -1,5 +1,6 @@
 ﻿using BLL.Interfaces;
 using DataModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,7 +20,7 @@ namespace API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var dt = _accBusiness.GetAll().Select(x => new { x.accountId, x.username, x.password });
+            var dt = _accBusiness.GetAll().Select(x => new { x.accountId, x.password ,x.username });
             return Ok(dt);
         }
 
@@ -31,13 +32,21 @@ namespace API.Controllers
             return dt;
         }
 
-        [Route("get-by-username")]
-        [HttpGet]
-        public AccountModel GetDataByAccount(string username, string password)
+
+
+
+        [AllowAnonymous]
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] AuthenticateModel model)
         {
-            var dt = _accBusiness.GetDataByAccount(username, password);
-            return dt;
+            var user = _accBusiness.Login(model.username, model.password);
+            if (user == null)
+                return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
+            return Ok(new { taikhoan = user.username, Email = user.email, token = user.token });
         }
+
+
+
 
         [Route("create-account")]
         [HttpPost]

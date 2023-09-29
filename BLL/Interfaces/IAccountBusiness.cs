@@ -11,7 +11,7 @@ namespace BLL.Interfaces
     {
         List<AccountModel> GetAll();
 
-        AccountModel GetDataByAccount(string username, string password);
+        AccountModel Login(string username, string password);
         AccountModel GetDataById(string id);
 
         bool Create(AccountModel model);

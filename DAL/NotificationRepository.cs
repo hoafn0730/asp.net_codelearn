@@ -24,16 +24,17 @@ namespace DAL
         public NotificationModel GetDataById(string id)
         {
 
+            string msgError = "";
             try
             {
-                var data = _db.ExecuteQuery(
-                    "sp_get_notification_by_id @id", new object[] { id });
-
-                return data.ConvertTo<NotificationModel>().FirstOrDefault();
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_get_notification_by_id",
+                     "@id", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<NotificationModel>().FirstOrDefault();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

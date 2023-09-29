@@ -21,7 +21,6 @@ namespace DAL
 
 
 
-
         public List< AccountModel > GetAll()
         {
             string msgError = "";
@@ -40,14 +39,16 @@ namespace DAL
         }
 
 
-        public AccountModel GetDataByAccount(string username, string password)
+
+
+        public AccountModel Login(string username, string password)
         {
             string msgError = "";
             try
             {
                 var data = _db.ExecuteSProcedureReturnDataTable(
                     out msgError,
-                    "sp_get_account_by_username",
+                    "sp_login",
                     "@username", username,
                     "@password", password);
                 if (!string.IsNullOrEmpty(msgError))
@@ -60,6 +61,7 @@ namespace DAL
                 throw ex;
             }
         }
+
 
         public AccountModel GetDataById(string id)
         {
