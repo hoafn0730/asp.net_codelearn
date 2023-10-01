@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -15,25 +16,6 @@ namespace API.Controllers
         {
             _accBusiness = accBusiness;
         }
-
-        [Route("get-all")]
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            var dt = _accBusiness.GetAll().Select(x => new { x.accountId, x.password ,x.username });
-            return Ok(dt);
-        }
-
-        [Route("get-by-id")]
-        [HttpGet]
-        public AccountModel GetDataById( string id )
-        {
-            var dt = _accBusiness.GetDataById(id);
-            return dt;
-        }
-
-
-
 
         [AllowAnonymous]
         [HttpPost("login")]
@@ -45,26 +27,39 @@ namespace API.Controllers
         }
 
 
+        [HttpGet("get-all")]
+        public IActionResult GetAll()
+        {
+            var dt = _accBusiness.GetAll().Select(x => new { x.accountId, x.password ,x.username });
+            return Ok(dt);
+        }
 
 
-        [Route("create-account")]
-        [HttpPost]
+        [HttpGet("get-by-id")]
+        public AccountModel GetDataById( string id )
+        {
+            var dt = _accBusiness.GetDataById(id);
+            return dt;
+        }
+
+
+        [AllowAnonymous]
+        [HttpPost("create-account")]
         public AccountModel CreateItem([FromBody] AccountModel model)
         {
             _accBusiness.Create(model);
             return model;
         }
 
-        [Route("update-account")]
-        [HttpPost]
+        [HttpPut("update-account")]
         public AccountModel UpdateItem([FromBody] AccountModel model)
         {
             _accBusiness.Update(model);
             return model;
         }
 
-        [Route("delete-account")]
-        [HttpPost]
+
+        [HttpDelete("delete-account")]
         public IActionResult DeleteItem(string id)
         {
             _accBusiness.Delete(id);

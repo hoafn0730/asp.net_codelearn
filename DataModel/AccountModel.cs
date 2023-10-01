@@ -14,6 +14,6 @@ namespace DataModel
         public string phoneNumber { get; set; }
         public string email { get; set; }
         public string typeId { get; set; }
-        public string token { get; set; }
+        public string? token { get; set; }
     }
 }

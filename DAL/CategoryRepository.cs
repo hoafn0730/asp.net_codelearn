@@ -19,11 +19,8 @@ namespace DAL
             _db = db;
         }
 
-
-
         public List<CategoryModel> GetAll()
         {
-
             try
             {
                 var data = _db.ExecuteQuery( "sp_get_all_categories" );
@@ -36,6 +33,53 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public bool Create(CategoryModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _db.ExecuteScalarSProcedureWithTransaction(
+                    out msgError,
+                    "sp_create_category",
+                "@name", model.name,
+                "@description", model.description,
+                "@slug", model.slug);
+                
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool Delete(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _db.ExecuteScalarSProcedureWithTransaction(
+                    out msgError,
+                    "sp_delete_category",
+                "@id", id);
+
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
     }
 }

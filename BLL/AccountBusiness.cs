@@ -23,11 +23,6 @@ namespace BLL
             secret = configuration["AppSettings:Secret"];
         }
 
-        public List<AccountModel> GetAll()
-        {
-            return _res.GetAll();
-        }
-
         public AccountModel Login(string username, string password)
         {
             var user = _res.Login(username, password);
@@ -54,7 +49,10 @@ namespace BLL
 
             return user;
         }
-
+        public List<AccountModel> GetAll()
+        {
+            return _res.GetAll();
+        }
 
         public AccountModel GetDataById(string id)
         {
