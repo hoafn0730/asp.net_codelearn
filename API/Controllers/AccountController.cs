@@ -40,8 +40,7 @@ namespace API.Controllers
         public IActionResult Login([FromBody] AuthenticateModel model)
         {
             var user = _accBusiness.Login(model.username, model.password);
-            if (user == null)
-                return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
+            if (user == null) return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
             return Ok(new { taikhoan = user.username, Email = user.email, token = user.token });
         }
 

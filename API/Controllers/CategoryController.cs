@@ -17,7 +17,7 @@ namespace API.Controllers
             _cBusiness = cBusiness;
         }
 
-
+        [AllowAnonymous]
         [Route("get-all")]
         [HttpGet]
         public IActionResult GetDataById()

@@ -28,7 +28,6 @@ namespace BLL
             return _res.GetAll();
         }
 
-
         public AccountModel Login(string username, string password)
         {
             var user = _res.Login(username, password);
@@ -44,7 +43,10 @@ namespace BLL
                     new Claim(ClaimTypes.StreetAddress, user.email)
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.Aes128CbcHmacSha256)
+                SigningCredentials = new SigningCredentials(
+                    new SymmetricSecurityKey(key), 
+                    SecurityAlgorithms.Aes128CbcHmacSha256
+                )
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);

@@ -17,6 +17,7 @@ namespace BLL
             _res = res;
         }
 
+        
         public List<CategoryModel> GetAll()
         {
             return _res.GetAll();

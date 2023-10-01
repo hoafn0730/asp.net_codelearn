@@ -9,7 +9,7 @@ namespace DataModel
     public class NotificationModel
     {
         public int notificationId { get; set; }
-        public string? title { get; set; }
+        public string title { get; set; }
 /*        public DateTime createdAt { get; set; }*/
     }
 }

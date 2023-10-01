@@ -57,7 +57,6 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -83,7 +82,6 @@ namespace DAL
                 throw ex;
             }
         }
-
 
         public bool Create(AccountModel model)
         {
