@@ -1,0 +1,15 @@
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\bin\Debug\net6.0\DAL.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\bin\Debug\net6.0\DAL.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\bin\Debug\net6.0\DataModel.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\bin\Debug\net6.0\DataModel.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\DAL.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\DAL.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DAL\obj\Debug\net6.0\ref\DAL.dll
