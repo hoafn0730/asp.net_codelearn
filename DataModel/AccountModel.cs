@@ -16,4 +16,5 @@ namespace DataModel
         public string typeId { get; set; }
         public string? token { get; set; }
     }
+
 }

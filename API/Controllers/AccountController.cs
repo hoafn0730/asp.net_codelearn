@@ -3,6 +3,7 @@ using DataModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Entities;
 
 namespace API.Controllers
 {
@@ -26,7 +27,7 @@ namespace API.Controllers
             return Ok(new { taikhoan = user.username, Email = user.email, token = user.token });
         }
 
-
+        [Authorize(Roles = Role.Admin)]
         [HttpGet("get-all")]
         public IActionResult GetAll()
         {
@@ -45,9 +46,9 @@ namespace API.Controllers
 
         [AllowAnonymous]
         [HttpPost("create-account")]
-        public AccountModel CreateItem([FromBody] AccountModel model)
+        public AccountModel CreateItem([FromBody] AccountModel model, string name)
         {
-            _accBusiness.Create(model);
+            _accBusiness.Create(model, name);
             return model;
         }
 

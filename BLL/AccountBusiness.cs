@@ -59,9 +59,9 @@ namespace BLL
             return _res.GetDataById(id);
         }
 
-        public bool Create(AccountModel model)
+        public bool Create(AccountModel model, string name)
         {
-            return _res.Create(model);
+            return _res.Create(model, name);
         }
 
         public bool Update(AccountModel model)

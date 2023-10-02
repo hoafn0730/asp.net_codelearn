@@ -77,7 +77,7 @@ namespace DAL
             }
         }
 
-        public bool Create(AccountModel model)
+        public bool Create(AccountModel model, string name)
         {
             string msgError = "";
             try
@@ -89,7 +89,11 @@ namespace DAL
                 "@password", model.password,
                 "@phoneNumber", model.phoneNumber,
                 "@email", model.email,
-                "@typeId", model.typeId);
+                "@typeId", model.typeId,
+                "@name", name
+                );
+
+
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);

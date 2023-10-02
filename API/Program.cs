@@ -35,6 +35,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddTransient<IDatabaseHelper, DatabaseHelper>();
 builder.Services.AddTransient<IAccountRepository, AccountRepository>();
 builder.Services.AddTransient<IAccountBusiness, AccountBusiness>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IUserBusiness, UserBusiness>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<ICategoryBusiness, CategoryBusiness>();
 builder.Services.AddTransient<INotificationRepository, NotificationRepository>();

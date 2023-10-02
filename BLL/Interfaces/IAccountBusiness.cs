@@ -14,7 +14,7 @@ namespace BLL.Interfaces
         AccountModel Login(string username, string password);
         AccountModel GetDataById(string id);
 
-        bool Create(AccountModel model);
+        bool Create(AccountModel model, string name);
 
         bool Update(AccountModel model);
 
