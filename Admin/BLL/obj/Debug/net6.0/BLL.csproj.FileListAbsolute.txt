@@ -1,0 +1,17 @@
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\bin\Debug\net6.0\BLL.deps.json
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\bin\Debug\net6.0\BLL.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\bin\Debug\net6.0\BLL.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\bin\Debug\net6.0\DAL.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\bin\Debug\net6.0\DataModel.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\bin\Debug\net6.0\DAL.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\bin\Debug\net6.0\DataModel.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\BLL.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\refint\BLL.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\BLL.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\Admin\BLL\obj\Debug\net6.0\ref\BLL.dll
