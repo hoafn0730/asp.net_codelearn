@@ -17,7 +17,7 @@ namespace API.Controllers
             _cBusiness = cBusiness;
         }
 
-        [AllowAnonymous]
+
         [HttpGet("get-all")]
         public IActionResult GetDataById()
         {
@@ -25,21 +25,8 @@ namespace API.Controllers
             return Ok(dt);
         }
 
-        [AllowAnonymous]
-        [HttpPost("create-category")]
-        public CategoryModel CreateItem([FromBody] CategoryModel model)
-        {
-            _cBusiness.Create(model);
-            return model;
-        }
-        [AllowAnonymous]
 
-        [HttpDelete("delete-category")]
-        public IActionResult DeleteItem(string id)
-        {
-            _cBusiness.Delete(id);
-            return Ok(new { message = "Xoas thanh cong!" });
-        }
+
 
     }
 }

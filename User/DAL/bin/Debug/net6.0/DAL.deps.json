@@ -8,9 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "DAL/1.0.0": {
         "dependencies": {
-          "DataModel": "1.0.0",
           "Microsoft.Data.SqlClient": "5.1.1",
           "Microsoft.Extensions.Configuration": "7.0.0",
+          "Models": "1.0.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
@@ -449,9 +449,9 @@
           }
         }
       },
-      "DataModel/1.0.0": {
+      "Models/1.0.0": {
         "runtime": {
-          "DataModel.dll": {}
+          "Models.dll": {}
         }
       }
     }
@@ -770,7 +770,7 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
-    "DataModel/1.0.0": {
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

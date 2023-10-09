@@ -26,14 +26,6 @@ namespace API.Controllers
             return Ok(new { taikhoan = user.username, Email = user.email, token = user.token });
         }
 
-        [Authorize(Roles = Role.Admin)]
-        [HttpGet("get-all")]
-        public IActionResult GetAll()
-        {
-            var dt = _accBusiness.GetAll().Select(x => new { x.accountId, x.password ,x.username });
-            return Ok(dt);
-        }
-
 
         [HttpGet("get-by-id")]
         public AccountModel GetDataById( string id )

@@ -9,8 +9,6 @@ namespace BLL.Interfaces
 {
     public interface IAccountBusiness
     {
-        List<AccountModel> GetAll();
-
         AccountModel Login(string username, string password);
         AccountModel GetDataById(string id);
 

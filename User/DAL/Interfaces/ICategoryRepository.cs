@@ -11,10 +11,6 @@ namespace DAL.Interfaces
     {
 
         List< CategoryModel > GetAll();
-        bool Create(CategoryModel model);
-
-        bool Delete(string id);
-
 
     }
 }

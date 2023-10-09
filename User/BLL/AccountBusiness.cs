@@ -49,10 +49,6 @@ namespace BLL
 
             return user;
         }
-        public List<AccountModel> GetAll()
-        {
-            return _res.GetAll();
-        }
 
         public AccountModel GetDataById(string id)
         {

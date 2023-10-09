@@ -31,8 +31,8 @@
               "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DAL\\DAL.csproj": {
                 "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DAL\\DAL.csproj"
               },
-              "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj": {
-                "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj"
+              "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj": {
+                "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj"
               }
             }
           }
@@ -96,8 +96,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj": {
-                "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj"
+              "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj": {
+                "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj"
               }
             }
           }
@@ -145,12 +145,12 @@
         }
       }
     },
-    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj": {
+    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj",
-        "projectName": "DataModel",
-        "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj",
+        "projectUniqueName": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj",
         "packagesPath": "C:\\Users\\HOAN\\.nuget\\packages\\",
         "outputPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\obj\\",
         "projectStyle": "PackageReference",

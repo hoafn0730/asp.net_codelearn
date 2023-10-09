@@ -25,7 +25,7 @@ namespace API.Controllers
             return Ok(dt);
         }
 
-        [AllowAnonymous]
+
         [HttpPut("update-user")]
         public UserModel UpdateItem([FromBody] UserModel model)
         {

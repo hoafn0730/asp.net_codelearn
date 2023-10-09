@@ -838,7 +838,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "DAL": "1.0.0",
-          "DataModel": "1.0.0",
+          "Models": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "7.0.1"
         },
         "compile": {
@@ -852,9 +852,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "DataModel": "1.0.0",
           "Microsoft.Data.SqlClient": "5.1.1",
           "Microsoft.Extensions.Configuration": "7.0.0",
+          "Models": "1.0.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
@@ -864,14 +864,14 @@
           "bin/placeholder/DAL.dll": {}
         }
       },
-      "DataModel/1.0.0": {
+      "Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/DataModel.dll": {}
+          "bin/placeholder/Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DataModel.dll": {}
+          "bin/placeholder/Models.dll": {}
         }
       }
     }
@@ -2171,19 +2171,19 @@
       "path": "../DAL/DAL.csproj",
       "msbuildProject": "../DAL/DAL.csproj"
     },
-    "DataModel/1.0.0": {
+    "Models/1.0.0": {
       "type": "project",
-      "path": "../DataModel/DataModel.csproj",
-      "msbuildProject": "../DataModel/DataModel.csproj"
+      "path": "../DataModel/Models.csproj",
+      "msbuildProject": "../DataModel/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BLL >= 1.0.0",
-      "DataModel >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.22",
       "Microsoft.Data.SqlClient >= 5.1.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
+      "Models >= 1.0.0",
       "Newtonsoft.Json >= 13.0.3",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -2218,8 +2218,8 @@
             "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\BLL\\BLL.csproj": {
               "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\BLL\\BLL.csproj"
             },
-            "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj": {
-              "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\DataModel.csproj"
+            "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj": {
+              "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj"
             }
           }
         }

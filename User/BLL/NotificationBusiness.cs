@@ -22,7 +22,11 @@ namespace BLL
             return _res.GetDataById(id);
         }
 
+        public bool Delete(string id)
+        {
+            return _res.Delete(id);
+        }
 
-        
+
     }
 }

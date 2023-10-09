@@ -34,51 +34,7 @@ namespace DAL
             }
         }
 
-        public bool Create(CategoryModel model)
-        {
-            string msgError = "";
-            try
-            {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(
-                    out msgError,
-                    "sp_create_category",
-                "@name", model.name,
-                "@description", model.description,
-                "@slug", model.slug);
-                
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
-                {
-                    throw new Exception(Convert.ToString(result) + msgError);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
-        public bool Delete(string id)
-        {
-            string msgError = "";
-            try
-            {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(
-                    out msgError,
-                    "sp_delete_category",
-                "@id", id);
-
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
-                {
-                    throw new Exception(Convert.ToString(result) + msgError);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
 
     }

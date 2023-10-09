@@ -11,6 +11,7 @@ namespace DAL.Interfaces
     {
 
         NotificationModel GetDataById(string id);
+        bool Delete(string id);
 
 
     }

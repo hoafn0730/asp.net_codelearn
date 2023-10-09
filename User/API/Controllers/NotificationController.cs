@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class NotificationController : ControllerBase
@@ -24,6 +24,14 @@ namespace API.Controllers
             var dt = _nBusiness.GetDataById(id);
             return dt;
         }
+
+        [HttpDelete("delete-notify")]
+        public IActionResult Delete(string id)
+        {
+            var dt = _nBusiness.Delete(id);
+            return Ok(new { message = "xoas thanh cong" });
+        }
+
 
     }
 }

@@ -39,5 +39,28 @@ namespace DAL
             }
         }
 
+
+        public bool Delete(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_delete_notification",
+                "@id", id);
+                ;
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
     }
 }

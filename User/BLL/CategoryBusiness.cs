@@ -23,15 +23,7 @@ namespace BLL
             return _res.GetAll();
         }
 
-        public bool Create(CategoryModel model)
-        {
-            return _res.Create(model);
-        }
 
-        public bool Delete(string id)
-        {
-            return _res.Delete(id);
-        }
 
     }
 }

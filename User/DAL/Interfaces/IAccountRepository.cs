@@ -11,7 +11,6 @@ namespace DAL.Interfaces
     {
 
         AccountModel Login(string username, string password);
-        List<AccountModel> GetAll();
         AccountModel GetDataById(string id);
         bool Create(AccountModel model, string name);
         bool Update(AccountModel model);

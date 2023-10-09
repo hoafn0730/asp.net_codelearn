@@ -11,6 +11,6 @@ namespace BLL.Interfaces
     {
         NotificationModel GetDataById(string id);
 
-
+        bool Delete(string id);
     }
 }

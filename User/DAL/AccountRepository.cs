@@ -39,23 +39,6 @@ namespace DAL
             }
         }
 
-        public List< AccountModel > GetAll()
-        {
-            string msgError = "";
-            try
-            {
-                var data = _db.ExecuteQuery( "sp_get_account");
-                if (!string.IsNullOrEmpty(msgError))
-                    throw new Exception(msgError);
-                return data.ConvertTo<AccountModel>().ToList();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
-
         public AccountModel GetDataById(string id)
         {
             string msgError = "";

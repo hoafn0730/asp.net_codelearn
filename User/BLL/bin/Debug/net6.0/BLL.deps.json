@@ -9,7 +9,7 @@
       "BLL/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
-          "DataModel": "1.0.0",
+          "Models": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "7.0.1"
         },
         "runtime": {
@@ -430,18 +430,18 @@
       },
       "DAL/1.0.0": {
         "dependencies": {
-          "DataModel": "1.0.0",
           "Microsoft.Data.SqlClient": "5.1.1",
           "Microsoft.Extensions.Configuration": "7.0.0",
+          "Models": "1.0.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "DAL.dll": {}
         }
       },
-      "DataModel/1.0.0": {
+      "Models/1.0.0": {
         "runtime": {
-          "DataModel.dll": {}
+          "Models.dll": {}
         }
       }
     }
@@ -730,7 +730,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DataModel/1.0.0": {
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
