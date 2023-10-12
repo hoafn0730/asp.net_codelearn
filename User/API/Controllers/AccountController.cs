@@ -21,9 +21,9 @@ namespace API.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] AuthenticateModel model)
         {
-            var user = _accBusiness.Login(model.username, model.password);
+            var user = _accBusiness.Login(model.Username, model.Password);
             if (user == null) return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
-            return Ok(new { taikhoan = user.username, Email = user.email, token = user.token });
+            return Ok(new { taikhoan = user.UserName, Email = user.Email, token = user.token });
         }
 
 

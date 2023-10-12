@@ -25,9 +25,9 @@ namespace DAL
             try
             {
                 var data = _db.ExecuteSProcedureReturnDataTable(
-                    out msgError, 
-                    "sp_get_account_by_id", 
-                    "@id", 
+                    out msgError,
+                    "sp_get_course_by_id",
+                    "@CourseId",
                     id);
                 if (!string.IsNullOrEmpty(msgError)) 
                     throw new Exception(msgError);
@@ -35,10 +35,37 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
+
+        public bool Create(CourseModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_create_courses",
+                "@name", model.Name,
+                "@description", model.Description,
+                "@level", model.Level,
+                "@price", model.Price,
+                "@slug", model.Slug,
+                "@categoryId", model.CategoryId,
+                "@teacherId", model.TeacherId,
+                "@list_json_Lessons", model.list_json_Lessons != null ? MessageConvert.SerializeObject(model.list_json_Lessons) : null);
+
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
 
     }

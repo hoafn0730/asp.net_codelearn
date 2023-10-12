@@ -8,12 +8,12 @@ namespace DataModel
 {
     public class AccountModel
     {
-        public int accountId { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-        public string phoneNumber { get; set; }
-        public string email { get; set; }
-        public string typeId { get; set; }
+        public int AccountId { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public string TypeId { get; set; }
         public string? token { get; set; }
     }
 

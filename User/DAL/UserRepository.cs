@@ -46,11 +46,11 @@ namespace DAL
             try
             {
                 var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_user_update",
-                "@id", model.userId,
-                "@name", model.name,
-                "@avatar", model.avatar,
-                "@banner", model.banner,
-                "@bio", model.bio);
+                "@id", model.UserId,
+                "@name", model.Name,
+                "@avatar", model.Avatar,
+                "@banner", model.Banner,
+                "@bio", model.Bio);
 
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
