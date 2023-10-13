@@ -12,5 +12,7 @@ namespace DAL.Interfaces
         CourseModel GetDataById(string id);
 
         bool Create(CourseModel model);
+
+        bool Update(CourseModel model);
     }
 }

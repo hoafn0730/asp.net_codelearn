@@ -20,7 +20,9 @@ namespace BLL
         public CourseModel GetDataById(string id) => _res.GetDataById(id);
 
         public bool Create(CourseModel model) =>  _res.Create(model);
-        
+
+        public bool Update(CourseModel model) =>  _res.Update(model);
+
 
 
 

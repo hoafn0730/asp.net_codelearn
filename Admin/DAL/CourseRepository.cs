@@ -66,6 +66,31 @@ namespace DAL
             }
         }
 
+        public bool Update(CourseModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_update_course",
+                "@CourseId", model.CourseId,
+                "@Name", model.Name,
+                "@Description", model.Description,
+                "@Image", model.Image,
+                "@Level", model.Level,
+                "@Price", model.Price,
+                "@Slug", model.Slug,
+                "@list_json_Lessons", model.list_json_Lessons != null ? MessageConvert.SerializeObject(model.list_json_Lessons) : null);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
 
     }
