@@ -92,6 +92,55 @@ namespace DAL
             }
         }
 
+        public bool Delete(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_delete_course",
+                "@CourseId", id);
+                ;
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+
+        public List<CourseStatiѕticModel> Search(
+            int pageIndex,
+            int pageSize,
+            out long total,
+            string name,
+            DateTime? fr_RegistrationDate,
+            DateTime? to_RegistrationDate)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_statiѕtic_course",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Name", name,
+                    "@fr_RegistrationDate", fr_RegistrationDate,
+                    "@to_RegistrationDate", to_RegistrationDate
+                     );
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<CourseStatiѕticModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

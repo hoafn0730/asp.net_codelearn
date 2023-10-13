@@ -67,11 +67,11 @@ namespace DAL
                 var result = _db.ExecuteScalarSProcedureWithTransaction(
                     out msgError,
                     "sp_account_create",
-                "@userName", model.username,
-                "@password", model.password,
-                "@phoneNumber", model.phoneNumber,
-                "@email", model.email,
-                "@typeId", model.typeId,
+                "@userName", model.UserName,
+                "@password", model.Password,
+                "@phoneNumber", model.PhoneNumber,
+                "@email", model.Email,
+                "@typeId", model.TypeId,
                 "@name", name
                 );
 
@@ -94,12 +94,12 @@ namespace DAL
             try
             {
                 var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_account_update",
-                "@id", model.accountId,
-                "@userName", model.username,
-                "@password", model.password,
-                "@phoneNumber", model.phoneNumber,
-                "@email", model.email,
-                "@typeId", model.typeId);
+                "@id", model.AccountId,
+                "@userName", model.UserName,
+                "@password", model.Password,
+                "@phoneNumber", model.PhoneNumber,
+                "@email", model.Email,
+                "@typeId", model.TypeId);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);

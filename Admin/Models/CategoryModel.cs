@@ -2,9 +2,9 @@
 {
     public class CategoryModel
     {
-        public int categoryId { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public string slug { get; set; }
+        public int CategoryId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Slug { get; set; }
     }
 }

@@ -23,6 +23,17 @@ namespace BLL
 
         public bool Update(CourseModel model) =>  _res.Update(model);
 
+        public bool Delete(string id) => _res.Delete(id);
+
+        public List<CourseStatiѕticModel> Search(
+                int pageIndex,
+                int pageSize,
+                out long total,
+                string name,
+                DateTime? fr_RegistrationDate,
+                DateTime? to_RegistrationDate) 
+            => _res.Search(pageIndex, pageSize,out total, name, fr_RegistrationDate, to_RegistrationDate);
+
 
 
 

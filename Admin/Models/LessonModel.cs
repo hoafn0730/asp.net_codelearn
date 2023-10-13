@@ -9,7 +9,7 @@ namespace DataModel
     public class LessonModel
     {
         public int LessonId { get; set; }
-        public string Name { get; set; }
+        public string NameLesson { get; set; }
         public string Description { get; set; }
         public string VideoId { get; set; }
         public string Slug { get; set; }

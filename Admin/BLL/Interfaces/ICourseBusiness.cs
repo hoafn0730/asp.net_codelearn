@@ -13,5 +13,14 @@ namespace BLL.Interfaces
 
         bool Create(CourseModel model);
         bool Update(CourseModel model);
+        bool Delete(string id);
+
+        List<CourseStatiѕticModel> Search(
+            int pageIndex,
+            int pageSize,
+            out long total,
+            string name,
+            DateTime? fr_RegistrationDate,
+            DateTime? to_RegistrationDate);
     }
 }

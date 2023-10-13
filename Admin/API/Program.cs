@@ -42,6 +42,8 @@ builder.Services.AddTransient<INotificationRepository, NotificationRepository>()
 builder.Services.AddTransient<INotificationBusiness, NotificationBusiness>();
 builder.Services.AddTransient<ICourseRepository, CourseRepository>();
 builder.Services.AddTransient<ICourseBusiness, CourseBusiness>();
+builder.Services.AddTransient<IParticipationRepository, ParticipationRepository>();
+builder.Services.AddTransient<IParticipationBusiness, ParticipationBusiness>();
 
 
 // configure strongly typed settings objects

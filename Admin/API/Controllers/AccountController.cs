@@ -21,9 +21,9 @@ namespace API.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] AuthenticateModel model)
         {
-            var user = _accBusiness.Login(model.username, model.password);
-            if (user == null || user.typeId != Role.Admin) return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
-            return Ok(new { taikhoan = user.username, Email = user.email, token = user.token });
+            var user = _accBusiness.Login(model.UserName, model.Password);
+            if (user == null || user.TypeId != Role.Admin) return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
+            return Ok(new { taikhoan = user.UserName, email = user.Email, token = user.token });
         }
 
 
