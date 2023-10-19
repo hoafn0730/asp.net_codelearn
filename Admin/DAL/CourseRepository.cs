@@ -45,7 +45,7 @@ namespace DAL
             try
             {
                 var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_create_courses",
-                "@name", model.Name,
+                "@name", model.NameCourse,
                 "@description", model.Description,
                 "@level", model.Level,
                 "@price", model.Price,
@@ -73,13 +73,14 @@ namespace DAL
             {
                 var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_update_course",
                 "@CourseId", model.CourseId,
-                "@Name", model.Name,
+                "@NameCourse", model.NameCourse,
                 "@Description", model.Description,
                 "@Image", model.Image,
                 "@Level", model.Level,
                 "@Price", model.Price,
                 "@Slug", model.Slug,
                 "@list_json_Lessons", model.list_json_Lessons != null ? MessageConvert.SerializeObject(model.list_json_Lessons) : null);
+
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);

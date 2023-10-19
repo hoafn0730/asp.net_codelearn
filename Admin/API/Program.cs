@@ -12,13 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
-        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
 
     options.AddPolicy("AllowSpecificOrigin", builder =>
     {
         builder.WithOrigins("http://127.0.0.1:5500") // Thêm nguồn của bạn vào đây
-            .AllowAnyMethod()
-            .AllowAnyHeader();
+                .AllowAnyMethod()
+                .AllowAnyHeader();
     });
 
     options.AddPolicy("AllowAnyOrigin", builder =>

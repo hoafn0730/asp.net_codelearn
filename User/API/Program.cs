@@ -41,6 +41,13 @@ builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<ICategoryBusiness, CategoryBusiness>();
 builder.Services.AddTransient<INotificationRepository, NotificationRepository>();
 builder.Services.AddTransient<INotificationBusiness, NotificationBusiness>();
+builder.Services.AddTransient<ICourseRepository, CourseRepository>();
+builder.Services.AddTransient<ICourseBusiness, CourseBusiness>();
+builder.Services.AddTransient<ILessonRepository, LessonRepository>();
+builder.Services.AddTransient<ILessonBusiness, LessonBusiness>();
+builder.Services.AddTransient<ICommentRepository, CommentRepository>();
+builder.Services.AddTransient<ICommentBusiness, CommentBusiness>();
+
 
 
 

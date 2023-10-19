@@ -46,8 +46,7 @@ namespace DAL
                 var data = _db.ExecuteSProcedureReturnDataTable(
                     out msgError, 
                     "sp_get_account_by_id", 
-                    "@id", 
-                    id);
+                    "@id", id);
                 if (!string.IsNullOrEmpty(msgError)) 
                     throw new Exception(msgError);
                 return data.ConvertTo<AccountModel>().FirstOrDefault();
@@ -131,6 +130,5 @@ namespace DAL
                 throw ex;
             }
         }
-
     }
 }

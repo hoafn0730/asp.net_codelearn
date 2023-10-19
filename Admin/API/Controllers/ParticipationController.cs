@@ -25,5 +25,26 @@ namespace API.Controllers
             return Ok(dt);
         }
 
+        [HttpPost("create-participation")]
+        public ParticipationModel CreateItem([FromBody] ParticipationModel model)
+        {
+            _pBusiness.Create(model);
+            return model;
+        }
+
+        [HttpPut("update-participation")]
+        public ParticipationModel UpdateItem([FromBody] ParticipationModel model)
+        {
+            _pBusiness.Update(model);
+            return model;
+        }
+
+        [HttpDelete("delete-participation")]
+        public IActionResult DeleteItem(string id)
+        {
+            _pBusiness.Delate(id);
+            return Ok(new {message = "Xoa thanh cong!"});
+        }
+
     }
 }

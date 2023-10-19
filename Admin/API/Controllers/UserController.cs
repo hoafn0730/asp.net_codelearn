@@ -41,8 +41,9 @@ namespace API.Controllers
                 var page = int.Parse(formData["page"].ToString());
                 var pageSize = int.Parse(formData["pageSize"].ToString());
                 string name = "";
-                if (formData.Keys.Contains("Name") && !string.IsNullOrEmpty(Convert.ToString(formData["Name"]))) { name = Convert.ToString(formData["Name"]); }
-               
+                if (formData.Keys.Contains("Name") && !string.IsNullOrEmpty(Convert.ToString(formData["Name"])))
+                { name = Convert.ToString(formData["Name"]); }
+
                 long total = 0;
                 var data = _uBusiness.Search(page, pageSize, out total, name);
                 return Ok(

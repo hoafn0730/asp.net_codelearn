@@ -15,7 +15,7 @@ namespace BLL.Interfaces
         bool Create(AccountModel model, string name);
 
         bool Update(AccountModel model);
-
+        
         bool Delete(string id);
     }
 }

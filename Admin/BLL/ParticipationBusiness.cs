@@ -23,6 +23,9 @@ namespace BLL
             return _res.GetDataById(id);
         }
 
+        public bool Create(ParticipationModel model) => _res.Create(model);
+        public bool Update(ParticipationModel model) => _res.Update(model);
+        public bool Delate(string id) => _res.Delete(id);
 
 
 

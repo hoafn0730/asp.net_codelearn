@@ -13,6 +13,5 @@ namespace DataModel
         public int UserId { get; set; }
         public DateTime RegistrationDate { get; set; }
 
-
     }
 }

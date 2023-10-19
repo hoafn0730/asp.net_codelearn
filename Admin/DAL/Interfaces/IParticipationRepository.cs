@@ -11,7 +11,9 @@ namespace DAL.Interfaces
     {
 
         ParticipationModel GetDataById(string id);
-
+        bool Create(ParticipationModel model);
+        bool Update(ParticipationModel model);
+        bool Delete(string id);
 
 
     }
