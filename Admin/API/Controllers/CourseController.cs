@@ -18,7 +18,7 @@ namespace API.Controllers
         }
 
 
-        [HttpGet("get-by-id")]
+        [HttpGet("get-by-id{id}")]
         public CourseModel GetDataById(string id) => _courseBusiness.GetDataById(id);
 
 

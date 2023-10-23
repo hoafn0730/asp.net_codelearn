@@ -25,7 +25,7 @@ namespace DAL
                     "sp_get_course_by_id",
                     "@CourseId",
                     id);
-                if (!string.IsNullOrEmpty(msgError)) 
+                if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return data.ConvertTo<CourseModel>().FirstOrDefault();
             }
@@ -109,7 +109,32 @@ namespace DAL
             }
         }
 
-
+        public List<CourseModel> Search (
+            int pageIndex,
+            int pageSize,
+            out long total,
+            string name
+        )
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_search_course",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Name", name
+                     );
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<CourseModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
     }
 }

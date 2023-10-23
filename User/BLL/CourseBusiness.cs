@@ -25,6 +25,13 @@ namespace BLL
 
         public bool Delete(string id) => _res.Delete(id);
 
+        public List<CourseModel> Search(
+            int pageIndex,
+            int pageSize,
+            out long total,
+            string name
+        ) => _res.Search(pageIndex, pageSize, out total, name);
+
 
 
 

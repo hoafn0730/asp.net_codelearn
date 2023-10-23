@@ -97,7 +97,6 @@ app.UseCors(x => x
     .AllowAnyMethod()
     .AllowAnyHeader());
 
-
 app.UseAuthentication();
 
 app.UseAuthorization();
