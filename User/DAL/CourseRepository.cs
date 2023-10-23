@@ -1,7 +1,7 @@
 ﻿using DAL.Interfaces;
 using DataModel;
 using DataAccessLayer;
-
+using Models;
 
 namespace DAL
 {
@@ -129,6 +129,24 @@ namespace DAL
                     throw new Exception(msgError);
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
                 return dt.ConvertTo<CourseModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public HomeModel GetHome()
+        {
+            string msgError = "";
+            try
+            {
+                var data = _db.ExecuteSProcedureReturnDataTable(
+                    out msgError,
+                    "sp_get_course_user");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return data.ConvertTo<HomeModel>().FirstOrDefault();
             }
             catch (Exception ex)
             {

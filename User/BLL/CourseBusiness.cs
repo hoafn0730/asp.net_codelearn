@@ -1,6 +1,7 @@
 ﻿using BLL.Interfaces;
 using DAL.Interfaces;
 using DataModel;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace BLL
         ) => _res.Search(pageIndex, pageSize, out total, name);
 
 
-
+        public HomeModel GetHome() => _res.GetHome();
 
     }
 }

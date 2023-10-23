@@ -1,4 +1,5 @@
 ﻿using DataModel;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,8 @@ namespace BLL.Interfaces
             out long total,
             string name
         );
+
+        HomeModel GetHome();
 
 
     }

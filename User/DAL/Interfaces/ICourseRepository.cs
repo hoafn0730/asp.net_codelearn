@@ -1,4 +1,5 @@
 ﻿using DataModel;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace DAL.Interfaces
             out long total,
             string name
         );
+
+        public HomeModel GetHome();
 
     }
 }
