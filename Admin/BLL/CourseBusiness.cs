@@ -34,7 +34,14 @@ namespace BLL
                 DateTime? to_RegistrationDate) 
             => _res.Search(pageIndex, pageSize,out total, name, fr_RegistrationDate, to_RegistrationDate);
 
-
+        public List<CourseStatiѕticModel> StatisticRevenue(
+            int pageIndex,
+            int pageSize,
+            out long total,
+            out long revenue,
+            string month,
+            string year) 
+            => _res.StatisticRevenue(pageIndex, pageSize, out total, out revenue,  month, year);
 
 
     }

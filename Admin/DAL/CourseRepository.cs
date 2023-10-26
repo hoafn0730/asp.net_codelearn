@@ -143,5 +143,39 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public List<CourseStatiѕticModel> StatisticRevenue(
+            int pageIndex,
+            int pageSize,
+            out long total,
+            out long revenue,
+            string month,
+            string year )
+        {
+            string msgError = "";
+            total = 0;
+            revenue = 0;
+
+            try
+            {
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_statistic_revenue",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@month", month,
+                    "@year", year
+                     );
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                if (dt.Rows.Count > 0) revenue = (long)dt.Rows[0]["Revenue"];
+
+                return dt.ConvertTo<CourseStatiѕticModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

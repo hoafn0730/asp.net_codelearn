@@ -3,6 +3,7 @@ using DataModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace API.Controllers
 {
@@ -18,7 +19,7 @@ namespace API.Controllers
         }
 
 
-        [HttpGet("get-by-id{id}")]
+        [HttpGet("get-by-id")]
         public CourseModel GetDataById(string id) => _courseBusiness.GetDataById(id);
 
 
@@ -79,6 +80,48 @@ namespace API.Controllers
                     new
                     {
                         TotalItems = total,
+                        Data = data,
+                        Page = page,
+                        PageSize = pageSize
+                    }
+                    );
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        [Route("statistic-revenue")]
+        [HttpPost]
+        public IActionResult StatisticRevenue([FromBody] Dictionary<string, object> formData)
+        {
+            try
+            {
+ 
+                var page = int.Parse(formData["page"].ToString());
+                var pageSize = int.Parse(formData["pageSize"].ToString());
+                
+                string month = "";
+                string year = "";
+                long total = 0;
+                long revenue = 0;
+
+                if (formData.Keys.Contains("month") && !string.IsNullOrEmpty(Convert.ToString(formData["month"])))
+                { month = Convert.ToString(formData["month"]); }
+
+                if (formData.Keys.Contains("year") && !string.IsNullOrEmpty(Convert.ToString(formData["year"])))
+                { year = Convert.ToString(formData["year"]); }
+                
+
+
+                var data = _courseBusiness.StatisticRevenue(page,  pageSize,out total,out revenue,  month,  year);
+
+                return Ok(
+                    new
+                    {
+                        TotalItems = total,
+                        Revenue = revenue,
                         Data = data,
                         Page = page,
                         PageSize = pageSize

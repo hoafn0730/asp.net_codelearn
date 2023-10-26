@@ -22,5 +22,13 @@ namespace BLL.Interfaces
             string name,
             DateTime? fr_RegistrationDate,
             DateTime? to_RegistrationDate);
+
+        List<CourseStatiѕticModel> StatisticRevenue(
+            int pageIndex,
+            int pageSize,
+            out long total,
+            out long revenue,
+            string month,
+            string year);
     }
 }

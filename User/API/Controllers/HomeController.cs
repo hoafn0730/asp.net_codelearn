@@ -22,7 +22,5 @@ namespace API.Controllers
         [HttpGet("get-home")]
         public HomeModel GetHome() => _courseBusiness.GetHome();
 
-
-
     }
 }

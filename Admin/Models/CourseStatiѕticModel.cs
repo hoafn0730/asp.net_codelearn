@@ -10,6 +10,7 @@ namespace DataModel
     {
         public int CourseId { get; set; }
         public string NameCourse { get; set; }
+        public int Price { get; set; }
         public int UserId { get; set; }
         public string Name { get; set; }
         public DateTime RegistrationDate { get; set; }

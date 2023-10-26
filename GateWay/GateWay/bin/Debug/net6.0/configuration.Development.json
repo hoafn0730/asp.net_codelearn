@@ -1,15 +1,15 @@
 ﻿{
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/khach/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/Course/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 41308
+          "Port": 44388
         }
       ],
-      "UpstreamPathTemplate": "/api-admin/khach-hang/{everything}",
+      "UpstreamPathTemplate": "/api-admin/khoa-hoc/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer",
@@ -17,15 +17,15 @@
       //}
     },
     {
-      "DownstreamPathTemplate": "/api/User/{everything}",
+      "DownstreamPathTemplate": "/api/Category/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7148
+          "Port": 44390
         }
       ],
-      "UpstreamPathTemplate": "/api-admin/user/{everything}",
+      "UpstreamPathTemplate": "/api-user/the-loai/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
     }
 
