@@ -32,6 +32,7 @@ namespace GateWay
                      .AddJsonFile("appsettings.json", true, true)
                      .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
                      .AddJsonFile($"configuration.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: false, reloadOnChange: true)
+                     .AddJsonFile("ocelot.json")
                      .AddEnvironmentVariables();
              })
              .ConfigureWebHostDefaults(webBuilder =>

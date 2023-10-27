@@ -84,3 +84,10 @@ D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\obj\Debug\net6.0
 D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\obj\Debug\net6.0\GateWay.pdb
 D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\obj\Debug\net6.0\GateWay.genruntimeconfig.cache
 D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\obj\Debug\net6.0\ref\GateWay.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\GateWay\GateWay\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

@@ -23,14 +23,13 @@ namespace DAL
             string msgError = "";
             try
             {
-                var data = _db.ExecuteSProcedureReturnDataTable(
-                    out msgError,
-                    "sp_login",
-                    "@username", username,
-                    "@password", password);
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_login",
+                     "@username", username,
+                     "@password", password
+                     );
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return data.ConvertTo<AccountModel>().FirstOrDefault();
+                return dt.ConvertTo<AccountModel>().FirstOrDefault();
             }
             catch (Exception ex)
             {
