@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BDBedZNxRxWZuarjDtxjS7+/lT4ZdJgs0TOsryV1gvgFacCPE52KiaZBWFbLnV3R0J+VBd+xPqh+YNmmdgW0/Q==",
+  "dgSpecHash": "bHj8o0bxoBCOIu8qOEvm5Hg1WnpTl6PMwIsBdJXIfHKyMdOv1UtOuBOycpWD5z0KKsPpyU1wT8hBp8llxzZ2sA==",
   "success": true,
-  "projectFilePath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\GateWay\\GateWay\\GateWay.csproj",
+  "projectFilePath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\GateWay\\GateWay\\GateWay.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HOAN\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\HOAN\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.24\\microsoft.aspnetcore.authentication.jwtbearer.6.0.24.nupkg.sha512",

@@ -12,5 +12,13 @@ namespace BLL.Interfaces
         NotificationModel GetDataById(string id);
 
         bool Delete(string id);
+
+        public List<NotificationModel> GetNotification(
+            int pageIndex,
+            int pageSize,
+            out long total
+        );
+
+
     }
 }

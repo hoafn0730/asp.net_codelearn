@@ -60,6 +60,31 @@ namespace DAL
             }
         }
 
+        public List<NotificationModel> GetNotification(
+            int pageIndex,
+            int pageSize,
+            out long total
+        )
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_get_notification",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize
+                     );
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<NotificationModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
 
     }

@@ -27,6 +27,12 @@ namespace BLL
             return _res.Delete(id);
         }
 
+        public List<NotificationModel> GetNotification (
+            int pageIndex,
+            int pageSize,
+            out long total
+        ) => _res.GetNotification(pageIndex, pageSize, out total);
+
 
     }
 }

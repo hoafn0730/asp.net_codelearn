@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wp3WWcATZ/4fTvtSqiVAg+qcUeBECeEfY4uzTRzV6jw0vYgKST07vrXgjZPQXpiBofyxanrOp4ecm7dM2kKBCA==",
+  "dgSpecHash": "WFHwmpD6sSTT9nGJDZjtRXOChI6O4/GoIiEJQydo9WNq6yboMxbcmF1Wk2CSIZ7anB40825KMlOksb1W90H+Lw==",
   "success": true,
-  "projectFilePath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\API\\API.csproj",
+  "projectFilePath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HOAN\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\HOAN\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

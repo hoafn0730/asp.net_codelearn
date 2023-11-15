@@ -2194,11 +2194,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\API\\API.csproj",
+      "projectUniqueName": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\API\\API.csproj",
+      "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\API\\API.csproj",
       "packagesPath": "C:\\Users\\HOAN\\.nuget\\packages\\",
-      "outputPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\API\\obj\\",
+      "outputPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HOAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2215,11 +2215,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\BLL\\BLL.csproj": {
-              "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\BLL\\BLL.csproj"
+            "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\BLL\\BLL.csproj": {
+              "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\BLL\\BLL.csproj"
             },
-            "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj": {
-              "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj"
+            "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\DataModel\\Models.csproj": {
+              "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\DataModel\\Models.csproj"
             }
           }
         }

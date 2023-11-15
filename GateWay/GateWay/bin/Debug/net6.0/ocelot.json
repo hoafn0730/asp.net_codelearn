@@ -13,66 +13,33 @@
         }
       ],
       "UpstreamPathTemplate": "/api-admin/{controller}/{action}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
-        "Key": "admin"
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE" ],
+      "Key": "admin"
     },
     {
-        "DownstreamPathTemplate": "/api/{controller}/{action}",
-        "DownstreamScheme": "https",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "localhost",
-            "Port": 7148
-          }
-        ],
-        "UpstreamPathTemplate": "/api-user/{controller}/{action}",
-        "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
-        "Key": "user"
-      }
-
-
-
-      //{
-      //  "DownstreamPathTemplate": "/api/catalog/{id}",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "localhost",
-      //      "Port": 44326
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/catalog/{id}",
-      //  "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44390
+        }
+      ],
+      "UpstreamPathTemplate": "/api-user/{controller}/{action}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "Key": "user"
       //  "AuthenticationOptions": {
       //    "AuthenticationProviderKey": "Bearer",
       //    "AllowedScopes": []
       //  }
-      //},
-      //{
-      //  "DownstreamPathTemplate": "/api/identity/login",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "localhost",
-      //      "Port": 44397
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/identity/login",
-      //  "UpstreamHttpMethod": [ "POST" ]
-      //},
-      //{
-      //  "DownstreamPathTemplate": "/api/identity/validate",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "localhost",
-      //      "Port": 44397
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/identity/validate",
-      //  "UpstreamHttpMethod": [ "GET" ]
-      //}
+    }
+
+
+
+    
+
   ],
+
   "Aggregates": [
     {
       "RouteKeys": [

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\GateWay\\GateWay\\GateWay.csproj": {}
+    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\GateWay\\GateWay\\GateWay.csproj": {}
   },
   "projects": {
-    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\GateWay\\GateWay\\GateWay.csproj": {
+    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\GateWay\\GateWay\\GateWay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\GateWay\\GateWay\\GateWay.csproj",
+        "projectUniqueName": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\GateWay\\GateWay\\GateWay.csproj",
         "projectName": "GateWay",
-        "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\GateWay\\GateWay\\GateWay.csproj",
+        "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\GateWay\\GateWay\\GateWay.csproj",
         "packagesPath": "C:\\Users\\HOAN\\.nuget\\packages\\",
-        "outputPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\GateWay\\GateWay\\obj\\",
+        "outputPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\GateWay\\GateWay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HOAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

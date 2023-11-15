@@ -15,6 +15,12 @@ namespace BLL.Interfaces
         bool Update(CourseModel model);
         bool Delete(string id);
 
+        List<CourseModel> GetCourse(
+           int pageIndex,
+           int pageSize,
+           out long total,
+           string name);
+
         List<CourseStatiѕticModel> Search(
             int pageIndex,
             int pageSize,

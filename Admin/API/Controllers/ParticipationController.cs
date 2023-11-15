@@ -32,7 +32,7 @@ namespace API.Controllers
             return model;
         }
 
-        [HttpPut("update-participation")]
+        [HttpPatch("update-participation")]
         public ParticipationModel UpdateItem([FromBody] ParticipationModel model)
         {
             _pBusiness.Update(model);

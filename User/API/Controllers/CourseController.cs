@@ -22,29 +22,8 @@ namespace API.Controllers
         public CourseModel GetDataById(string id) => _courseBusiness.GetDataById(id);
 
 
-        [HttpPost("create-course")]
-        public CourseModel CreateItem([FromBody] CourseModel model)
-        {
-            _courseBusiness.Create(model);
-            return model;
-        }
-
-
-        [HttpPatch("update-course")]
-        public CourseModel UpdateItem([FromBody] CourseModel model)
-        {
-            _courseBusiness.Update(model);
-            return model;
-        }
-
-
-        [HttpDelete("delete-course")]
-        public IActionResult DeleteItem(string id)
-        {
-            _courseBusiness.Delete(id);
-            return Ok(new { message = "Xóa thành công" });
-        }
-
+        [HttpGet("get-by-userid")]
+        public List<CourseModel> GetDataByUserId(string id) => _courseBusiness.GetDataByUserId(id);
 
         [Route("search")]
         [HttpPost]

@@ -19,7 +19,6 @@ namespace DAL
             _db = db;
         }
 
-
         public bool Create(CommentModel model)
         {
             string msgError = "";

@@ -13,6 +13,12 @@ namespace DAL.Interfaces
         NotificationModel GetDataById(string id);
         bool Delete(string id);
 
+        List<NotificationModel> GetNotification(
+            int pageIndex,
+            int pageSize,
+            out long total
+        );
+
 
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj": {}
+    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\DataModel\\Models.csproj": {}
   },
   "projects": {
-    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj": {
+    "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\DataModel\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj",
+        "projectUniqueName": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\DataModel\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\Models.csproj",
+        "projectPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\DataModel\\Models.csproj",
         "packagesPath": "C:\\Users\\HOAN\\.nuget\\packages\\",
-        "outputPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\User\\DataModel\\obj\\",
+        "outputPath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\User\\DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HOAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

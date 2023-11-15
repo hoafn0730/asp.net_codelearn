@@ -11,7 +11,8 @@ namespace DataModel
         public int ParticipationId { get; set; }
         public int CourseId { get; set; }
         public int UserId { get; set; }
-        public DateTime RegistrationDate { get; set; }
+        public DateTime? RegistrationDate { get; set; }
+        public string Status { get; set; }
 
     }
 }

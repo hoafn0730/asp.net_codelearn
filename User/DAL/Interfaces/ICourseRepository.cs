@@ -12,18 +12,14 @@ namespace DAL.Interfaces
     {
         CourseModel GetDataById(string id);
 
-        bool Create(CourseModel model);
-
-        bool Update(CourseModel model);
-
-        bool Delete(string id);
-
         List<CourseModel> Search(
             int pageIndex,
             int pageSize,
             out long total,
             string name
         );
+
+        List<CourseModel> GetDataByUserId(string id);
 
         public HomeModel GetHome();
 

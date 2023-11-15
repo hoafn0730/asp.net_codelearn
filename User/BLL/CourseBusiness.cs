@@ -19,12 +19,7 @@ namespace BLL
         }
 
         public CourseModel GetDataById(string id) => _res.GetDataById(id);
-
-        public bool Create(CourseModel model) =>  _res.Create(model);
-
-        public bool Update(CourseModel model) =>  _res.Update(model);
-
-        public bool Delete(string id) => _res.Delete(id);
+        public List<CourseModel> GetDataByUserId(string id) => _res.GetDataByUserId(id);
 
         public List<CourseModel> Search(
             int pageIndex,

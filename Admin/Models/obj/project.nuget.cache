@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ReWyO5syn7Y38OPjgbCTKHpUWd73ehJ+Z8not1YEiBmN8fU8ja2Dh+XRKcMK1bZi2IKIJj7dwdcs2uftxi7mSg==",
+  "dgSpecHash": "lI5N1pPs+jOyjg/2GzWSTxgKRoTLR3xX/xUeM1G+d66sfCK/hx7Zh03Yh7ZaBAroyJY76BaSJpwK6bqyBDAwVQ==",
   "success": true,
-  "projectFilePath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\Codelearn\\Admin\\Models\\DataModel.csproj",
+  "projectFilePath": "D:\\Subjects\\III\\ASP.NET\\BTL - asp.net\\codelearn_api\\Admin\\Models\\DataModel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

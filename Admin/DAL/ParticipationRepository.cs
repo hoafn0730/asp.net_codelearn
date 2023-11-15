@@ -48,7 +48,8 @@ namespace DAL
                     out msgError,
                     "sp_create_Participation",
                 "@CourseId", model.CourseId,
-                "@UserId", model.UserId
+                "@UserId", model.UserId,
+                "@Status", model.Status
                 );
 
 
@@ -74,7 +75,9 @@ namespace DAL
                     "sp_update_Participation",
                     "@ParticipationId", model.ParticipationId,
                 "@CourseId", model.CourseId,
-                "@UserId", model.UserId
+                "@UserId", model.UserId,
+                "@Status", model.Status
+
                 );
 
 
@@ -111,6 +114,35 @@ namespace DAL
         }
 
 
+        public List<ParticipationModel> Search(
+           int pageIndex,
+           int pageSize,
+           out long total,
+           string name,
+           DateTime? fr_RegistrationDate,
+           DateTime? to_RegistrationDate)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_statiѕtic_course",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Name", name,
+                    "@fr_RegistrationDate", fr_RegistrationDate,
+                    "@to_RegistrationDate", to_RegistrationDate
+                     );
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<ParticipationModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
 
     }
