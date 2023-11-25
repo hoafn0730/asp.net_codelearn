@@ -18,7 +18,7 @@ namespace API.Controllers
 
 
         [HttpGet("get-all")]
-        public IActionResult GetDataById()
+        public async Task<IActionResult> GetDataById()
         {
             var dt = _cBusiness.GetAll().Select(x => new { x.CategoryId,  x.Name, x.Description });
             return Ok(dt);

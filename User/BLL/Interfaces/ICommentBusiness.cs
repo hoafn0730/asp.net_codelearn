@@ -10,6 +10,7 @@ namespace BLL.Interfaces
     public interface ICommentBusiness
     {
 
+        List<CommentModel> GetDataById(string id);
         bool Create(CommentModel model);
         bool Update(CommentModel model);
         bool Delete(string id);

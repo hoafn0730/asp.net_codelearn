@@ -1,4 +1,5 @@
-﻿using BLL.Interfaces;
+﻿using BLL;
+using BLL.Interfaces;
 using DataModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -6,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CommentController : ControllerBase
@@ -18,10 +19,13 @@ namespace API.Controllers
         }
 
 
+        [AllowAnonymous]
+        [HttpGet("get-by-id")]
+        public async Task< List<CommentModel> > GetDataById(string id) => _cBusiness.GetDataById(id);
 
 
         [HttpPost("create-comment")]
-        public CommentModel CreateItem([FromBody] CommentModel model)
+        public async Task< CommentModel > CreateItem([FromBody] CommentModel model)
         {
             _cBusiness.Create(model);
             return model;
@@ -29,7 +33,7 @@ namespace API.Controllers
 
 
         [HttpPatch("update-comment")]
-        public CommentModel UpdateItem([FromBody] CommentModel model)
+        public async Task<CommentModel> UpdateItem([FromBody] CommentModel model)
         {
             _cBusiness.Update(model);
             return model;
@@ -37,7 +41,7 @@ namespace API.Controllers
 
 
         [HttpDelete("delete-comment")]
-        public IActionResult DeleteItem(string id)
+        public async Task< IActionResult > DeleteItem(string id)
         {
             _cBusiness.Delete(id);
             return Ok(new { message = "Xóa thành công" });

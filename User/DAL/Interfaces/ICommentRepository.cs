@@ -9,6 +9,8 @@ namespace DAL.Interfaces
 {
     public interface ICommentRepository
     {
+
+        List<CommentModel> GetDataById(string id);
         bool Create(CommentModel model);
 
         bool Update(CommentModel model);

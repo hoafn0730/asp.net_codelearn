@@ -20,7 +20,7 @@ namespace API.Controllers
 
 
         [HttpGet("get-home")]
-        public HomeModel GetHome() => _courseBusiness.GetHome();
+        public async Task< HomeModel > GetHome() => _courseBusiness.GetHome();
 
     }
 }

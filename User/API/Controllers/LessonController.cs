@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class LessonController : ControllerBase
@@ -19,7 +19,7 @@ namespace API.Controllers
         }
 
         [HttpGet("get-by-id")]
-        public IActionResult GetDataById(string id)
+        public async Task< IActionResult > GetDataById(string id)
         {
             var dt = _lBusiness.GetDataById(id);
             return Ok(dt);

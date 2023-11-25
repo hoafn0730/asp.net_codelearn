@@ -19,6 +19,26 @@ namespace DAL
             _db = db;
         }
 
+        public List< CommentModel >GetDataById(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var data = _db.ExecuteSProcedureReturnDataTable(
+                    out msgError,
+                    "sp_get_comments_by_lessonId",
+                    "@lessonId",
+                    id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return data.ConvertTo<CommentModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public bool Create(CommentModel model)
         {
             string msgError = "";

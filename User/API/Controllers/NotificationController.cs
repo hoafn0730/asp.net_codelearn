@@ -1,9 +1,11 @@
-﻿using BLL;
+﻿using API.Hubs;
+using BLL;
 using BLL.Interfaces;
 using DataModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 
 namespace API.Controllers
 {
@@ -13,30 +15,47 @@ namespace API.Controllers
     public class NotificationController : ControllerBase
     {
         private INotificationBusiness _nBusiness;
-        public NotificationController(INotificationBusiness nBusiness)
+        private readonly IHubContext<SignalrHub> _hubContext;
+        public NotificationController(INotificationBusiness nBusiness, IHubContext<SignalrHub> hubContext)
         {
             _nBusiness = nBusiness;
+            _hubContext = hubContext;
         }
+
+        [Route("get-all")]
+        [HttpGet]
+        public async Task<ActionResult<List<NotificationModel>>> GetAll()
+        {
+            var dt = _nBusiness.GetAll();
+            await _hubContext.Clients.All.SendAsync("ReceiveNotification", dt);
+            return Ok(dt);
+        }
+
+
 
         [Route("get-by-id/{id}")]
         [HttpGet]
-        public NotificationModel GetDataById( string id )
+        public async Task<NotificationModel> GetDataById( string id )
         {
             var dt = _nBusiness.GetDataById(id);
+           // await _hubContext.Clients.All.SendAsync("ReceiveDataById", dt);
             return dt;
         }
 
+
         [HttpDelete("delete-notify")]
-        public IActionResult Delete(string id)
+        public async Task<IActionResult> Delete(string id)
         {
-            var dt = _nBusiness.Delete(id);
+            _nBusiness.Delete(id);
+            var dt = _nBusiness.GetAll();
+            await _hubContext.Clients.All.SendAsync("ReceiveNotification", dt);
             return Ok(new { message = "xoas thanh cong" });
         }
 
 
         [Route("get-notyfication")]
         [HttpPost]
-        public IActionResult GetNotification([FromBody] Dictionary<string, object> formData)
+        public async  Task<IActionResult> GetNotification([FromBody] Dictionary<string, object> formData)
         {
             try
             {

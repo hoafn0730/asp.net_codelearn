@@ -9,6 +9,8 @@ namespace BLL.Interfaces
 {
     public interface INotificationBusiness
     {
+
+        List<NotificationModel> GetAll();
         NotificationModel GetDataById(string id);
 
         bool Delete(string id);

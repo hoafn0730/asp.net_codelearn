@@ -17,8 +17,8 @@ namespace BLL
             _res = res;
         }
 
-       
 
+        public List<CommentModel> GetDataById(string id) => _res.GetDataById(id);
         public bool Create(CommentModel model) =>  _res.Create(model);
 
         public bool Update(CommentModel model) =>  _res.Update(model);

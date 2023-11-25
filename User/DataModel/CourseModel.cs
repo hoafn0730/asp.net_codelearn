@@ -16,6 +16,7 @@ namespace DataModel
         public string Slug { get; set; }
         public int CategoryId { get; set; }
         public int TeacherId { get; set; }
+        public int Process { get; set; }
 
         public string? Content { get; set; }
         public string? Image { get; set; }

@@ -4,6 +4,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Builder;
 
 namespace GateWay
 {
@@ -21,6 +22,13 @@ namespace GateWay
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+                options.AddPolicy("AllowSpecificOrigin", builder =>
+                {
+                    builder.WithOrigins("http://127.0.0.1:5500") // Update with the actual origin of your client
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials();
+                });
             });
 
             services.AddControllers();
@@ -40,7 +48,6 @@ namespace GateWay
             var appSettings = appSettingsSection.Get<AppSettings>();
 
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
-
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -71,8 +78,6 @@ namespace GateWay
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gateway v1"));
             }
 
-
-
             app.UseRouting();
 
             // global cors policy
@@ -80,6 +85,7 @@ namespace GateWay
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader());
+
 
             app.UseHttpsRedirection();
 
@@ -94,7 +100,10 @@ namespace GateWay
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                
             });
+
+            
 
             await app.UseOcelot();
         }

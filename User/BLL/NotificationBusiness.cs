@@ -17,6 +17,11 @@ namespace BLL
             _res = res;
         }
 
+        public List<NotificationModel> GetAll()
+        {
+            return _res.GetAll();
+        }
+
         public NotificationModel GetDataById(string id)
         {
             return _res.GetDataById(id);

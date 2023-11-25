@@ -10,6 +10,7 @@ namespace DAL.Interfaces
     public interface INotificationRepository
     {
 
+        List<NotificationModel> GetAll();
         NotificationModel GetDataById(string id);
         bool Delete(string id);
 

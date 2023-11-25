@@ -20,6 +20,22 @@ namespace DAL
         }
 
 
+        public List<NotificationModel> GetAll()
+        {
+
+            string msgError = "";
+            try
+            {
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_get_all_notification");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<NotificationModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public NotificationModel GetDataById(string id)
         {

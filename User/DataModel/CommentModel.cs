@@ -14,10 +14,12 @@ namespace DataModel
         public int? VotersCount { get; set; }
         public int UserId { get; set; }
         public int LessonId { get; set; }
+        public int ParentId { get; set; }
 
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public DateTime DeletedAt { get; set; }
+        public List<CommentModel>? list_json_CommentsChildren { get; set; }
     }
 
 }

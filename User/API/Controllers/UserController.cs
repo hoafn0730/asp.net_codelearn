@@ -27,7 +27,7 @@ namespace API.Controllers
 
 
         [HttpPut("update-user")]
-        public UserModel UpdateItem([FromBody] UserModel model)
+        public  UserModel UpdateItem([FromBody] UserModel model)
         {
             _uBusiness.Update(model);
             return model;

@@ -116,7 +116,7 @@ namespace API.Controllers
                         Page = page,
                         PageSize = pageSize
                     }
-                    );
+                );
             }
             catch (Exception ex)
             {

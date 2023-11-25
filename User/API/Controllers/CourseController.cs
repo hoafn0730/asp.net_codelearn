@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    //[Authorize]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class CourseController : ControllerBase
@@ -19,15 +19,15 @@ namespace API.Controllers
 
 
         [HttpGet("get-by-id")]
-        public CourseModel GetDataById(string id) => _courseBusiness.GetDataById(id);
-
+        public async Task< CourseModel > GetDataById(string id) => _courseBusiness.GetDataById(id);
 
         [HttpGet("get-by-userid")]
         public List<CourseModel> GetDataByUserId(string id) => _courseBusiness.GetDataByUserId(id);
 
+
         [Route("search")]
         [HttpPost]
-        public IActionResult Search([FromBody] Dictionary<string, object> formData)
+        public async Task< IActionResult > Search([FromBody] Dictionary<string, object> formData)
         {
             try
             {
